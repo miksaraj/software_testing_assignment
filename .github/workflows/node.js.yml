@@ -12,8 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
-        # node-coveralls doesn't support Node.js 20 or newer, so let's use some old versions then...
+        node-version: [16.x, 18.x, 20.x]
 
     steps:
     - uses: actions/checkout@v4
