@@ -30,3 +30,7 @@ jobs:
 
     - name: Coveralls
       uses: coverallsapp/github-action@v2
+      # According to this StackOverflow question:
+      # https://stackoverflow.com/questions/58858429/how-to-run-a-github-actions-step-even-if-the-previous-step-fails-while-still-f
+      # this should allow the step to run even if the previous step fails, but also enable cancelling the workflow.
+      if: '!cancelled()'
