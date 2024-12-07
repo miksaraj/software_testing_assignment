@@ -97,4 +97,21 @@ describe('keys', () => {
         // Assert
         expect(result).toEqual(expected);
     });
+
+    it('should not return equal values for both execution paths', () => {
+        // Arrange
+        const string = 'hi';
+        const expected = ['0', '1'];
+        arrayLikeKeys.mockReturnValue(expected);
+        const objectString = Object.keys(Object(string));
+
+        // Act
+        const result = keys(string);
+
+        // Assert
+        expect(isArrayLike(string)).toBe(true);
+        expect(arrayLikeKeys).toHaveBeenCalledWith(string);
+        expect(result).toEqual(expected);
+        expect(result).not.toEqual(objectString);
+    });
 });
