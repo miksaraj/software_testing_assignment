@@ -1,5 +1,7 @@
 # Student template
 
+[![Coverage Status](https://coveralls.io/repos/github/miksaraj/software_testing_assignment/badge.svg?branch=main)](https://coveralls.io/github/miksaraj/software_testing_assignment?branch=main)
+
 ## Purpose of this repository
 
 This is a project template for students participating in Software Testing course
